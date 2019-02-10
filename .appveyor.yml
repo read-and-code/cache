@@ -1,14 +1,14 @@
 image: Visual Studio 2017
 environment:
   matrix:
-    - GO: "C:\go"
-    - GO: "C:\go-x86"
-    - GO: "C:\go110"
-    - GO: "C:\go110-x86"
-    - GO: "C:\go19"
-    - GO: "C:\go19-x86"
+    - GO: "C:\\go"
+    - GO: "C:\\go-x86"
+    - GO: "C:\\go110"
+    - GO: "C:\\go110-x86"
+    - GO: "C:\\go19"
+    - GO: "C:\\go19-x86"
 build: off
 install:
-  - "SET PATH=%GO%"
+  - "SET PATH=%GO%;%PATH%"
 test_script:
   - go build
