@@ -12,7 +12,6 @@ clone_folder: c:\gopath\src\github.com\read-and-code\cache
 build: off
 install:
   - "SET PATH=%GO%\\bin;%PATH%"
-  - "echo %GO%"
   - "SET GOROOT=%GO%"
 before_test:
   - go version
