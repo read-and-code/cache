@@ -1,14 +1,18 @@
 image: Visual Studio 2017
 environment:
   matrix:
-    - GO: "C:\\go"
-    - GO: "C:\\go-x86"
+    - GO: "C:\go111"
+    - GO: "C:\go111-x86"
     - GO: "C:\\go110"
     - GO: "C:\\go110-x86"
     - GO: "C:\\go19"
     - GO: "C:\\go19-x86"
+clone_folder: c:\gopath\src\github.com\$username\$project
+GOPATH: c:\gopath
 build: off
 install:
   - "SET PATH=%GO%;%PATH%"
+before_test:
+  - go vet ./...
 test_script:
   - go build
