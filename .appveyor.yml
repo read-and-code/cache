@@ -1,6 +1,7 @@
 image: Visual Studio 2017
 environment:
   GOPATH: c:\gopath
+  GOTOOLDIR: %GO%\pkg\tool\windows_%GOARCH%
   matrix:
     - GO: "C:\\go111"
     - GO: "C:\\go111-x86"
@@ -11,7 +12,7 @@ environment:
 clone_folder: c:\gopath\src\github.com\read-and-code\cache
 build: off
 install:
-  - "SET PATH=%GO%\\bin;%GO%\\pkg\\tool\\windows_amd64;%GO%\\pkg\\tool\\windows_386;%PATH%"
+  - "SET PATH=%GO%\\bin;%PATH%"
 before_test:
   - go version
   - go env
