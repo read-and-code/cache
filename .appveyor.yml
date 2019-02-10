@@ -13,6 +13,7 @@ build: off
 install:
   - "SET PATH=%GO%;%PATH%"
 before_test:
+  - go version
   - go vet ./...
 test_script:
   - go build
