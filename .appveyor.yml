@@ -14,6 +14,7 @@ install:
   - "SET PATH=%GO%\\bin;%GO%\\pkg\\tool\\windows_amd64;%GO%\\pkg\\tool\\windows_386;%PATH%"
 before_test:
   - go version
+  - ls %GO%\pkg\tool
   - go vet ./...
 test_script:
   - go build
