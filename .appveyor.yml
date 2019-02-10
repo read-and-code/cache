@@ -8,7 +8,7 @@ environment:
     - GO: "C:\\go110-x86"
     - GO: "C:\\go19"
     - GO: "C:\\go19-x86"
-clone_folder: c:\gopath\src\github.com\read-and-code\cache
+clone_folder: %GOPATH%\src\github.com\read-and-code\cache
 build: off
 install:
   - "SET PATH=%GO%\\bin;%PATH%"
