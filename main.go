@@ -1,8 +1,8 @@
 package main
 
 import (
-	"cache/cache"
-	"cache/http"
+	"github.com/read-and-code/cache/cache"
+	"github.com/read-and-code/cache/http"
 )
 
 func main() {

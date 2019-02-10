@@ -1,7 +1,7 @@
 package http
 
 import (
-	"cache/cache"
+	"github.com/read-and-code/cache/cache"
 	"net/http"
 )
 
