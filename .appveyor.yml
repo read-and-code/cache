@@ -1,7 +1,7 @@
 image: Visual Studio 2017
 environment:
   GOPATH: c:\gopath
-  GOTOOLDIR: %GO%\pkg\tool\windows_%GOARCH%
+  GOTOOLDIR: $env:GO\pkg\tool\windows_$env:GOARCH
   matrix:
     - GO: "C:\\go111"
     - GO: "C:\\go111-x86"
