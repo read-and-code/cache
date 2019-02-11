@@ -20,6 +20,6 @@ func (server *Server) Listen() {
 	}
 }
 
-func New(cache cache.Cache) *Server {
+func NewServer(cache cache.Cache) *Server {
 	return &Server{cache}
 }

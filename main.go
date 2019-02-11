@@ -8,5 +8,5 @@ import (
 func main() {
 	cache := cache.NewCache("inmemory")
 
-	http.New(cache).Listen()
+	http.NewServer(cache).Listen()
 }
