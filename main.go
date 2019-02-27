@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	cache := cache.NewCache("inmemory")
+	cacheProvider := cache.NewCache("inmemory")
 
-	http.NewServer(cache).Listen()
+	http.NewServer(cacheProvider).Listen()
 }
