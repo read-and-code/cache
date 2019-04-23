@@ -4,10 +4,6 @@ environment:
   matrix:
     - GO: "C:\\go111"
     - GO: "C:\\go111-x86"
-    - GO: "C:\\go110"
-    - GO: "C:\\go110-x86"
-    - GO: "C:\\go19"
-    - GO: "C:\\go19-x86"
 clone_folder: ${GOPATH}\src\github.com\read-and-code\cache
 build: off
 install:
