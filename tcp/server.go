@@ -3,14 +3,15 @@ package tcp
 import (
 	"github.com/read-and-code/cache/cache"
 	"net"
+	"strconv"
 )
 
 type Server struct {
 	cache cache.Cache
 }
 
-func (server *Server) Listen() {
-	listener, err := net.Listen("tcp", ":12346")
+func (server *Server) Listen(port int) {
+	listener, err := net.Listen("tcp", ":"+strconv.Itoa(port))
 
 	if err != nil {
 		panic(err)

@@ -9,41 +9,41 @@ import (
 
 func (server *Server) readKey(reader *bufio.Reader) (string, error) {
 	keyLength, err := readLength(reader)
-	
+
 	if err != nil {
 		return "", err
 	}
-	
+
 	key := make([]byte, keyLength)
 	_, err = io.ReadFull(reader, key)
-	
+
 	if err != nil {
 		return "", err
 	}
-	
+
 	return string(key), nil
 }
 
 func (server *Server) readKeyAndValue(reader *bufio.Reader) (string, []byte, error) {
 	keyLength, err := readLength(reader)
-	
+
 	if err != nil {
 		return "", nil, err
 	}
-	
+
 	valueLength, err := readLength(reader)
-	
+
 	if err != nil {
 		return "", nil, err
 	}
-	
+
 	key := make([]byte, keyLength)
 	_, err = io.ReadFull(reader, key)
-	
+
 	if err != nil {
 		return "", nil, err
 	}
-	
+
 	value := make([]byte, valueLength)
 	_, err = io.ReadFull(reader, value)
 
@@ -119,4 +119,3 @@ func (server *Server) process(connection net.Conn) {
 		}
 	}
 }
-

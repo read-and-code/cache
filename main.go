@@ -9,6 +9,6 @@ import (
 func main() {
 	cacheProvider := cache.NewCache("inmemory")
 
-	go tcp.NewServer(cacheProvider).Listen()
-	http.NewServer(cacheProvider).Listen()
+	go tcp.NewServer(cacheProvider).Listen(12346)
+	http.NewServer(cacheProvider).Listen(12345)
 }
